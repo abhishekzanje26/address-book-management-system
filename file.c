@@ -16,7 +16,7 @@ void saveContactsToFile(AddressBook *addressBook)
     {
         fprintf(fp, "%s,%s,%s\n", addressBook->contacts[i].name,addressBook->contacts[i].phone, addressBook->contacts[i].email);
     }
-
+    
     fclose(fp);
 }
 

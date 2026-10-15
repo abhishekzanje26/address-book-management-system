@@ -16,9 +16,27 @@ void listContacts(AddressBook *addressBook)
             }
         }
     }
-    for (int i=0; i<addressBook->contactCount;i++){
-         printf("%s\t%s\t%s\n",addressBook->contacts[i].name,addressBook->contacts[i].phone, addressBook->contacts[i].email);
-    }
+    //for (int i=0; i<addressBook->contactCount;i++){
+      //   printf("%s\t%s\t%s\n",addressBook->contacts[i].name,addressBook->contacts[i].phone, addressBook->contacts[i].email);
+    //}
+    printf("\n===============================================================\n");
+printf("                         CONTACT LIST\n");
+printf("===============================================================\n");
+
+printf("%-20s %-15s %-30s\n", "Name", "Phone", "Email");
+
+printf("---------------------------------------------------------------\n");
+
+for (int i = 0; i < addressBook->contactCount; i++){
+    printf("%-20s %-15s %-30s\n",
+           addressBook->contacts[i].name,
+           addressBook->contacts[i].phone,
+           addressBook->contacts[i].email);
+}
+
+printf("===============================================================\n");
+printf("Total Contacts: %d\n", addressBook->contactCount);
+printf("===============================================================\n");
 }
 void initialize(AddressBook *addressBook) {
     addressBook->contactCount = 0;
